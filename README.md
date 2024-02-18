@@ -1,12 +1,12 @@
 # Pokemon GO search strings
-This project reads the game master file and generates search strings for Pokemon GO. The search strings can be used to filter Pokemon using the in the game search.
+This project reads the game master file and generates search strings for Pokemon GO. The search strings can be used to filter Pokemon using the in game search.
 ## Usage
 Copy the search string and paste it in the search bar in Pokemon GO.
 
 To save a search string:
  1. Clear the search string from the search bar
  1. [See more] to reveal Recent searches
- 1. Long press on the search string under Recent to add it to favorites
+ 1. Long press on the search string under Recent to add it to Favorites
  1. Long press on the search string under Favorites and give the search a name
 
 ![Screenshot from Favorite searches inside the game with all the search strings added](screenshot.png)
