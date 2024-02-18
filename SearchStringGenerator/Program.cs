@@ -17,6 +17,7 @@ markdown.AppendLine("# Pokemon GO search strings")
 
 markdown.AddSearchStringTable("BuddyDistance", pokemons.DistanceSearchStrings(), x => $"Buddy {x} km");
 markdown.AddSearchStringTable("PurificationStardustNeeded", pokemons.PurificationStardustSearchStrings(), x => $"Purify {x}", x => $"shadow&{x}");
+markdown.AddSearchStringTable("candyToEvolve", pokemons.CandyToEvolve(), x => x);
 
 markdown.AppendLine("# Regenerating the README.md file")
         .AppendLine("To regenerate the README.md file, run the `SearchStringGenerator` project.")

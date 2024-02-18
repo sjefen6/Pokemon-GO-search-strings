@@ -2,6 +2,7 @@
 
 public class Pokemon(JToken token)
 {
+    private JToken _token = token;
     private const string Data = "data";
     private const string PokemonSettings = "pokemonSettings";
 
@@ -12,6 +13,9 @@ public class Pokemon(JToken token)
     public int PokemonNumber => GetPokemonNumber();
     public string? Form => GetForm();
     public string TemplateId => GetTemplateId();
+    public int? candyToEvolve => GetCandyToEvolve();
+
+    private int? GetCandyToEvolve() => GetInt(token[Data]?[PokemonSettings]?["evolutionBranch"]?.First()["candyCost"]);
 
     private string? GetPokemonId() => token[Data]?[PokemonSettings]?["pokemonId"]?.ToString();
     private int GetKmBuddyDistance() => GetInt(token[Data]?[PokemonSettings]?["kmBuddyDistance"]) ?? throw new InvalidOperationException();

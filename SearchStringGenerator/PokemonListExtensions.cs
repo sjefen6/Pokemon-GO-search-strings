@@ -12,6 +12,11 @@ public static class PokemonListExtensions
         return pokemons.GenerateSearchStrings(x => x.KmBuddyDistance);
     }
     
+    public static Dictionary<string, string> CandyToEvolve(this List<Pokemon> pokemons)
+    {
+        return pokemons.GenerateSearchStrings(x => x.candyToEvolve);
+    }
+    
     private static Dictionary<string, string> GenerateSearchStrings(this IReadOnlyCollection<Pokemon> pokemons, Func<Pokemon, int?> propertySelector)
     {
         var distinctPropertyValues = pokemons
